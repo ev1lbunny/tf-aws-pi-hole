@@ -17,8 +17,8 @@
 |------|-------------|------|---------|:--------:|
 | aws\_credentials\_profile | High level rofile name that the terraform uses for aws access to create new role/policy/user for pihole deployment | `any` | n/a | yes |
 | aws\_region | Region of aws to use | `string` | `"eu-west-2"` | no |
+| ingress\_access\_ip\_address | Ip address that you will access the pihole from. All other access will be locked. | `any` | n/a | yes |
 | pi\_hole\_management\_role | Rolename created from the iam code used for managing the pi-hole instance | `string` | `"pi-hole-management-role"` | no |
-| pi\_hole\_management\_session\_name | Session name passed to the assume role when running setup | `string` | `"Pi-hole Management Role Session"` | no |
 
 ## Outputs
 
