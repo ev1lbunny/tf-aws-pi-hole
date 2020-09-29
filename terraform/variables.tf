@@ -15,3 +15,8 @@ variable "aws_credentials_profile" {
 variable "ingress_access_ip_address" {
   description = "Ip address that you will access the pihole from. All other access will be locked."
 }
+
+variable "key_pair_name" {
+  description = "Name to give the generated keypair that will be associated with the ec2 isntance for ssh access"
+  default     = "pi-hole-server-keypair"
+}
