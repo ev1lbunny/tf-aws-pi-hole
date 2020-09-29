@@ -11,3 +11,7 @@ variable "pi_hole_management_role" {
 variable "aws_credentials_profile" {
   description = "High level rofile name that the terraform uses for aws access to create new role/policy/user for pihole deployment"
 }
+
+variable "ingress_access_ip_address" {
+  description = "Ip address that you will access the pihole from. All other access will be locked."
+}
