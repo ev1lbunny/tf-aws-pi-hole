@@ -10,6 +10,7 @@
 | Name | Version |
 |------|---------|
 | aws | ~> 2.50.0 |
+| template | n/a |
 | tls | n/a |
 
 ## Inputs
@@ -21,6 +22,7 @@
 | ingress\_access\_ip\_address | Ip address that you will access the pihole from. All other access will be locked. | `any` | n/a | yes |
 | key\_pair\_name | Name to give the generated keypair that will be associated with the ec2 isntance for ssh access | `string` | `"pi-hole-server-keypair"` | no |
 | pi\_hole\_management\_role | Rolename created from the iam code used for managing the pi-hole instance | `string` | `"pi-hole-management-role"` | no |
+| pi\_hole\_web\_admin\_password | Password For accessing the Pihole gui admin console. Not really needed since security groups stop anyone but a single ip (your ip) from accessing it anyhow | `string` | `""` | no |
 
 ## Outputs
 

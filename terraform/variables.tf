@@ -20,3 +20,8 @@ variable "key_pair_name" {
   description = "Name to give the generated keypair that will be associated with the ec2 isntance for ssh access"
   default     = "pi-hole-server-keypair"
 }
+
+variable "pi_hole_web_admin_password" {
+  description = "Password For accessing the Pihole gui admin console. Not really needed since security groups stop anyone but a single ip (your ip) from accessing it anyhow"
+  default     = ""
+}

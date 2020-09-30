@@ -4,3 +4,5 @@
 terraform.tfstate.backup
 terraform.tfstate
 .DS_Store
+.pem
+aws-pi-hole-server.pem
