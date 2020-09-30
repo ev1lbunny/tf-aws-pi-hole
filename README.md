@@ -8,8 +8,10 @@ It will also create a user/role/policy that can then be used from this point for
 
 ## Prerequisites
 A basic knowledge of terraform , how to apply and run it.
+A basic understanding of how to configure / setup and use aws cli commands. -- You will need to setup appropriate profile
 
 ## Versions
 See change log for specifics. Recommended that the latest tag is always used rather than master
 
 ## Usage
+Simply run `terraform-apply` and provide the variables required. It will create the rest.
