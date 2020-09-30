@@ -35,6 +35,14 @@ resource "aws_security_group" "pi_hole_security_group" {
   }
 
   ingress {
+    description = "Home LAN OPENVPN UDP Access"
+    from_port   = 1194
+    to_port     = 1194
+    protocol    = "udp"
+    cidr_blocks = ["${var.ingress_access_ip_address}/32"]
+  }
+
+  ingress {
     description = "Home LAN DNS TCP Access"
     from_port   = 53
     to_port     = 53
