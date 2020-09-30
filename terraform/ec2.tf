@@ -8,7 +8,7 @@ resource "aws_key_pair" "generated_pi_hole_server_keypair" {
   public_key = tls_private_key.pi_hole_key_pair_config.public_key_openssh
 }
 
-data "template_file" "pi_hole_init" {
+data "template_file" "pi_hole_user_data" {
   template = "${file("${path.module}/templates/pi-hole-init.tpl")}"
   vars = {
     public_ip          = var.ingress_access_ip_address
@@ -25,7 +25,10 @@ resource "aws_instance" "pi_hole_ec2" {
   root_block_device {
     volume_size = 20
   }
-  user_data = data.template_file.pi_hole_init.rendered
+  user_data = data.template_file.pi_hole_user_data.rendered
+  tags = {
+    "Name" = "AWS Pi Hole Server"
+  }
 }
 
 resource "aws_eip" "pi_hole_elastic_ip" {
