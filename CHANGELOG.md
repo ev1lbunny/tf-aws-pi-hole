@@ -10,14 +10,15 @@ Dates in this file are in format of YYYY-MM-DD (2019-12-13 means 13th of Decembe
 ## [[UNRELEASED]](https://github.com/kmalkin/tf-aws-pi-hole/releases/tag/n.n.n) - nnnn-nn-nn
 
 ### Added
-* upgrade to tf 0.13
-* added r53 config
-* added .tools setup for asdf
+* upgrade to tf 0.13 [@alastairhm](https://github.com/alastairhm)
+* added r53 config [@alastairhm](https://github.com/alastairhm)
+* added .tools setup for asdf [@alastairhm](https://github.com/alastairhm)
+* added optional flag for the r53 zone in case customers dont have one or want to remain free tier[@kmalkin](https://github.com/kmalkin)
 
 
 ## [[1.1.0]](https://github.com/kmalkin/tf-aws-pi-hole/releases/tag/1.1.0) - 2020-09-30
 
 ### Added
 
-* Basic TF code for deployment to aws. [@kmalkin](https://gitlab.com/kmalkin)
-* TF code for sgs, ec2, iam all done. along with user data template. [@kmalkin](https://gitlab.com/kmalkin)
+* Basic TF code for deployment to aws. [@kmalkin](https://github.com/kmalkin)
+* TF code for sgs, ec2, iam all done. along with user data template. [@kmalkin](https://github.com/kmalkin)
