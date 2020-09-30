@@ -1,7 +1,9 @@
 #!/bin/bash
 
-apt-get update -Y
-apt-get upgrade -Y
+apt-get update -y
+apt-get upgrade -y
+mkdir /etc/pihole
+touch /etc/pihole/setupVars.conf
 
 cat >/etc/pihole/setupVars.conf <<EOL
 WEBPASSWORD=${web_admin_password}
