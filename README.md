@@ -15,3 +15,10 @@ See change log for specifics. Recommended that the latest tag is always used rat
 
 ## Usage
 Simply run `terraform-apply` and provide the variables required. It will create the rest.
+
+## Future features
+ASG to ensure there is always a running instance
+Variablised instance type so that it can be run on other instance types instead of just t2.mico (free tier)
+
+# !!!! DISCLAIMER !!!!
+All code is currently designed to run within aws free tier. However there are still certain costs associated with running infra in aws. All costs are down to the responsibility of the aws account owner. If you dont know/understand what this is deploying. Dont deploy it. There may be running costs involved with elastic ips/storage/keypairs that you as the aws account owner would be responsible for.
