@@ -25,3 +25,8 @@ variable "pi_hole_web_admin_password" {
   description = "Password For accessing the Pihole gui admin console. Not really needed since security groups stop anyone but a single ip (your ip) from accessing it anyhow"
   default     = ""
 }
+
+variable "r53_zone" {
+  description = "Route 53 Zone"
+  type        = string
+}
