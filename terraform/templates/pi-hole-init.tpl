@@ -5,10 +5,12 @@ apt-get upgrade -y
 mkdir /etc/pihole
 touch /etc/pihole/setupVars.conf
 
+current_public_facing_ip="$(dig +short myip.opendns.com @resolver1.opendns.com)"
+
 cat >/etc/pihole/setupVars.conf <<EOL
 WEBPASSWORD=${web_admin_password}
 PIHOLE_INTERFACE=eth0
-IPV4_ADDRESS=${public_ip}
+IPV4_ADDRESS=${current_public_facing_ip}
 IPV6_ADDRESS=2601:444:8111:403:55d6:2f11:41bf:13bb
 QUERY_LOGGING=true
 INSTALL_WEB=true
