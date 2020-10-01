@@ -30,6 +30,6 @@
 
 | Name | Description |
 |------|-------------|
+| pi\_hole\_public\_ip | Pi Hole Public IP created |
 | pihole | DNS Entry |
-| public\_ip | Public IP created |
 
