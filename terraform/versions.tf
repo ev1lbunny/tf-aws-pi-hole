@@ -1,7 +1,4 @@
 terraform {
-  backend "s3" {
-    key = "terraform-aws/pihole_openvpn/terraform.tfstate"
-  }
   required_version = ">= 0.13.0"
   required_providers {
     aws = {
