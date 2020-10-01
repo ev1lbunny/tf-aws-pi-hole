@@ -17,9 +17,12 @@ resource "aws_instance" "open_vpn_ec2" {
     volume_size = 20
   }
   user_data = data.template_file.open_vpn_user_data.rendered
-  tags = {
-    "Name" = "Open Vpn Server"
-  }
+  tags = merge(
+    {
+      Name = "Open Vpn Server"
+    },
+    var.additional_tags,
+  )
 }
 
 resource "aws_eip" "open_vpn_elastic_ip" {

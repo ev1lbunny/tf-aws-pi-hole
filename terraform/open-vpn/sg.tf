@@ -57,7 +57,10 @@ resource "aws_security_group" "open_vpn_security_group" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags = {
-    Name = "OpenVPN Security Group"
-  }
+  tags = merge(
+    {
+      Name = "OpenVPN Security Group"
+    },
+    var.additional_tags,
+  )
 }

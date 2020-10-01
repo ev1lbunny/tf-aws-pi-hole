@@ -57,7 +57,10 @@ resource "aws_security_group" "pi_hole_security_group" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags = {
-    Name = "Pi hole Security Group"
-  }
+  tags = merge(
+    {
+      Name = "Pi Hole Security Group"
+    },
+    var.additional_tags,
+  )
 }

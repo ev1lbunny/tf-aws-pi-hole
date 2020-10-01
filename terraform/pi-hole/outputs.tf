@@ -1,5 +1,5 @@
-output "public_ip" {
-  description = "Public IP created"
+output "pi_hole_public_ip" {
+  description = "Pi Hole Public IP created"
   value       = aws_eip.pi_hole_elastic_ip.public_ip
 }
 

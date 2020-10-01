@@ -17,9 +17,12 @@ resource "aws_instance" "pi_hole_ec2" {
     volume_size = 20
   }
   user_data = data.template_file.pi_hole_user_data.rendered
-  tags = {
-    "Name" = "AWS Pi Hole Server"
-  }
+  tags = merge(
+    {
+      Name = "Pi Hole Server"
+    },
+    var.additional_tags,
+  )
 }
 
 resource "aws_eip" "pi_hole_elastic_ip" {
