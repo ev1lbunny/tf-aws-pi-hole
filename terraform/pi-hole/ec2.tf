@@ -14,7 +14,7 @@ resource "aws_instance" "pi_hole_ec2" {
   vpc_security_group_ids = [aws_security_group.pi_hole_security_group.id, aws_security_group.open_vpn_to_pi_hole_security_group.id]
   key_name               = var.pi_hole_key_pair_name
   root_block_device {
-    volume_size = 20
+    volume_size = 10
   }
   user_data = data.template_file.pi_hole_user_data.rendered
   tags = merge(

@@ -14,7 +14,7 @@ resource "aws_instance" "open_vpn_ec2" {
   vpc_security_group_ids = [aws_security_group.open_vpn_security_group.id]
   key_name               = var.open_vpn_key_pair_name
   root_block_device {
-    volume_size = 20
+    volume_size = 10
   }
   user_data = data.template_file.open_vpn_user_data.rendered
   tags = merge(
