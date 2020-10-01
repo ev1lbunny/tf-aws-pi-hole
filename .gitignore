@@ -4,3 +4,4 @@
 .DS_Store
 .pem
 aws-pi-hole-server.pem
+ahm.tfvars
