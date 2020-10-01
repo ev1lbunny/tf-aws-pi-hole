@@ -16,7 +16,7 @@ Also configured if you use version 2.#.# onwards is the ability to have a pre-co
 * A basic knowledge of terraform , how to apply and run it.
 * A basic understanding of how to configure / setup and use aws cli commands. -- You will need to setup appropriate profile
 
-##NB
+NB
 * It is recommended that you setup/and use a remote state.
 
 
@@ -24,8 +24,8 @@ Also configured if you use version 2.#.# onwards is the ability to have a pre-co
 
 See change log for specifics.
 
-1.#.# >= only the Pi Hole deployment (Now this works we are probably not expecting much more to be added here except standard updates/patches)
-2.#.# >= both the Pi Hole and OpenVPN
+- 1.#.# >= only the Pi Hole deployment (Now this works we are probably not expecting much more to be added here except standard updates/patches)
+- 2.#.# >= both the Pi Hole and OpenVPN
 
 ## Usage
 
