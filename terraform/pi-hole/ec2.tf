@@ -28,6 +28,12 @@ resource "aws_instance" "pi_hole_ec2" {
 resource "aws_eip" "pi_hole_elastic_ip" {
   instance = aws_instance.pi_hole_ec2.id
   vpc      = true
+  tags = merge(
+    {
+      Name = "Pi Hole Elastic IP"
+    },
+    var.additional_tags,
+  )
 }
 
 data "template_file" "pi_hole_user_data" {

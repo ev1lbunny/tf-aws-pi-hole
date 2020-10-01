@@ -28,6 +28,12 @@ resource "aws_instance" "open_vpn_ec2" {
 resource "aws_eip" "open_vpn_elastic_ip" {
   instance = aws_instance.open_vpn_ec2.id
   vpc      = true
+  tags = merge(
+    {
+      Name = "Open Vpn Elastic IP"
+    },
+    var.additional_tags,
+  )
 }
 
 data "template_file" "open_vpn_user_data" {
