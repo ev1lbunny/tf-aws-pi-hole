@@ -75,7 +75,7 @@ resource "aws_security_group" "open_vpn_to_pi_hole_security_group" {
     from_port   = 53
     to_port     = 53
     protocol    = "udp"
-    cidr_blocks = ["${var.open_vpn_source_ip[0]}/32"]
+    cidr_blocks = ["${var.open_vpn_source_ip}/32"]
   }
 
   ingress {
@@ -83,7 +83,7 @@ resource "aws_security_group" "open_vpn_to_pi_hole_security_group" {
     from_port   = 53
     to_port     = 53
     protocol    = "tcp"
-    cidr_blocks = ["${var.open_vpn_source_ip[0]}/32"]
+    cidr_blocks = ["${var.open_vpn_source_ip}/32"]
   }
 
   tags = merge(
