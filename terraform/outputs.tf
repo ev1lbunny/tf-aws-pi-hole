@@ -5,5 +5,5 @@ output "public_ip" {
 
 output "pihole" {
   description = "DNS Entry"
-  value       = aws_route53_record.pihole.fqdn
+  value       = join("", aws_route53_record.pihole.*.fqdn)
 }

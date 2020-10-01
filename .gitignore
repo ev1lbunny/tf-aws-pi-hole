@@ -1,8 +1,7 @@
 .terraform
-.tfstate
-.tfstate.backup
-terraform.tfstate.backup
-terraform.tfstate
+*.tfstate
+*.tfstate.backup
 .DS_Store
 .pem
 aws-pi-hole-server.pem
+ahm.tfvars
