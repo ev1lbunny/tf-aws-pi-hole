@@ -64,3 +64,32 @@ resource "aws_security_group" "pi_hole_security_group" {
     var.additional_tags,
   )
 }
+
+resource "aws_security_group" "open_vpn_to_pi_hole_security_group" {
+
+  name        = "open-vpn-pi-hole-security-group"
+  description = "Configures All rules required for open vpn instance to use pihole as dns lookup"
+
+  ingress {
+    description = "OpenVPN DNS UDP Access"
+    from_port   = 53
+    to_port     = 53
+    protocol    = "udp"
+    cidr_blocks = ["${var.open_vpn_source_ip[0]}/32"]
+  }
+
+  ingress {
+    description = "OpenVPN LAN DNS TCP Access"
+    from_port   = 53
+    to_port     = 53
+    protocol    = "tcp"
+    cidr_blocks = ["${var.open_vpn_source_ip[0]}/32"]
+  }
+
+  tags = merge(
+    {
+      Name = "Open VPN DNS Access to Pi Hole Security Group"
+    },
+    var.additional_tags,
+  )
+}

@@ -8,6 +8,7 @@ module "pi_hole" {
   enable_r53_zone_code       = var.enable_r53_zone_code
   r53_zone                   = var.r53_zone
   additional_tags            = var.additional_tags
+  open_vpn_source_ip         = module.open_vpn.private_ip
 }
 
 module "open_vpn" {

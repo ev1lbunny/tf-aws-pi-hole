@@ -1,15 +1,12 @@
 ## Requirements
 
-| Name | Version |
-|------|---------|
-| terraform | >= 0.13.0 |
-| aws | ~> 3.0 |
+No requirements.
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| aws | ~> 3.0 |
+| aws | n/a |
 | template | n/a |
 | tls | n/a |
 
@@ -29,6 +26,7 @@
 
 | Name | Description |
 |------|-------------|
+| private\_ip | OpenVPN Private IP created |
 | public\_ip | OpenVPN Public IP created |
 | r53\_entry | DNS Entry |
 

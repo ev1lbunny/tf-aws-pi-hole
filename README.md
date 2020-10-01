@@ -30,11 +30,13 @@ See change log for specifics.
 ## Usage
 
 Setup which state storage you want to use. By default it will assume backend remote state storage.
-* There are 2 files.
-** `versions_with_local.tf.NO` use this if you want local storage of state.
-** `versions_with_remote.tf` use this one if you want remote storage.
-
 If you do want to use with remote state make sure you run `terraform apply` in the `backend-state` folder to release the needed infra for remote state storage
+If you dont want to use remote state remove the following from the versions.tf file 
+```
+  backend "s3" {
+    key = "terraform-aws/pihole_openvpn/terraform.tfstate"
+  }
+```
 
 Then simply run `terraform apply` in the parent terraform directory and provide the variables required. It will create the rest.
 
