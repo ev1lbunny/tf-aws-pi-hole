@@ -24,11 +24,7 @@
 | key\_pair\_name | Name to give the generated keypair that will be associated with the ec2 isntance for ssh access | `string` | `"pi-hole-server-keypair"` | no |
 | pi\_hole\_management\_role | Rolename created from the iam code used for managing the pi-hole instance | `string` | `"pi-hole-management-role"` | no |
 | pi\_hole\_web\_admin\_password | Password For accessing the Pihole gui admin console. Not really needed since security groups stop anyone but a single ip (your ip) from accessing it anyhow | `string` | `""` | no |
-<<<<<<< HEAD
-| r53\_zone | Route 53 Zone | `string` | n/a | yes |
-=======
 | r53\_zone | Route 53 Zone | `string` | `""` | no |
->>>>>>> upstream/develop
 
 ## Outputs
 
