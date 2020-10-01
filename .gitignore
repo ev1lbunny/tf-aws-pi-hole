@@ -7,4 +7,4 @@ ahm.tfvars
 kmalkin.tfvars
 open-vpn-server-keypair.pem
 pi-hole-server-keypair.pem
-mac_tunnelblick.ovpn
+*.ovpn
