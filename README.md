@@ -9,9 +9,7 @@ https://pi-hole.net/
 
 This repo is responsible for managing/creating an ec2 instance inside of aws free tier t2.micro with an elastic ip address and deploying pihole preconfigured into that instance
 
-It will also create a user/role/policy that can then be used from this point forwards to manage the service. However for first time run. Higher permissions are needed in order for the tf to be able to create the resources required.
-
-For now the user it creates is a placeholder and had an incomplete policy. So will need admin to release initial run.
+Also configured if you use version 2.#.# onwards is the ability to have a pre-configured openvpn instance too so not jsut the dns is filtered but all traffic can then go down the vpn too
 
 ## Prerequisites
 
@@ -19,7 +17,8 @@ For now the user it creates is a placeholder and had an incomplete policy. So wi
 * A basic understanding of how to configure / setup and use aws cli commands. -- You will need to setup appropriate profile
 
 ##NB
-* It is recommended that you setup/and use a remote state config by updating the `terraform {}` block in the `versions.tf` to use some form of remote state management etc. However I am not planning on making remote state mandatory. If people want to run and keep state in local systems, thats fine, although not recommended. To that end, there is a `backend-state` module that you can run if you choose too which will create the bucket and dynamo db table needed for backend state. Then you can just update the `terraform {}` definition to use the new backend resources if you choose.
+* It is recommended that you setup/and use a remote state.
+
 
 ## Versions
 
@@ -30,7 +29,14 @@ See change log for specifics.
 
 ## Usage
 
-Simply run `terraform-apply` and provide the variables required. It will create the rest.
+Setup which state storage you want to use. By default it will assume backend remote state storage.
+* There are 2 files.
+** `versions_with_local.tf.NO` use this if you want local storage of state.
+** `versions_with_remote.tf` use this one if you want remote storage.
+
+If you do want to use with remote state make sure you run `terraform apply` in the `backend-state` folder to release the needed infra for remote state storage
+
+Then simply run `terraform apply` in the parent terraform directory and provide the variables required. It will create the rest.
 
 Or include the variables in a parameter file like `terraform apply -var-file=params/default.tfvars`
 
