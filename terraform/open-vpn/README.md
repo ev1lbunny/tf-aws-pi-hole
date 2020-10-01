@@ -29,6 +29,6 @@
 
 | Name | Description |
 |------|-------------|
-| open\_vpn\_public\_ip | OpenVPN Public IP created |
-| openvpn | DNS Entry |
+| public\_ip | OpenVPN Public IP created |
+| r53\_entry | DNS Entry |
 

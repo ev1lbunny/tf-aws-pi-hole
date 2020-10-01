@@ -25,5 +25,10 @@ No provider.
 
 ## Outputs
 
-No output.
+| Name | Description |
+|------|-------------|
+| open\_vpn\_public\_ip | OpenVPN Public IP created |
+| open\_vpn\_r53\_entries | OpenVPN DNS Entries |
+| pi\_hole\_public\_ip | Pi Hole Public IP created |
+| pi\_hole\_r53\_entries | Pi Hole DNS Entries |
 
