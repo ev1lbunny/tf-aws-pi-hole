@@ -1,4 +1,9 @@
 # tf-aws-pi-hole
+## Complete Terraform solution to Pi Hole install
+
+Many thanks to the guys and gals that actually provide this free opensource tool for the benefit of us all.
+https://pi-hole.net/
+
 
 ## Overview
 
