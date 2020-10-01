@@ -43,7 +43,7 @@ See change log for specifics.
 * Or include the variables in a parameter file like `terraform apply -var-file=params/default.tfvars`
 
 * The only step to do is to pull the *.ovpn config for programs like (tunnelblick) from the pre-configured openvpn isntance using SCP.
-* EG. `scp -i "YOUR-CERT.pem" ubuntu@YOUR-EC2-INSTANCE:default_client.ovpn .
+* EG. `scp -i "YOUR-CERT.pem" ubuntu@YOUR-EC2-INSTANCE:default_client.ovpn .`
 
 * Of course you can login via ssh and create new client setups if you require. OpenVPN is configurable once logged in with `sudo lmovpn`
 
