@@ -11,21 +11,25 @@ Dates in this file are in format of YYYY-MM-DD (2019-12-13 means 13th of Decembe
 
 ### Added
 
-* NEW `backend-state` code that setups bucket and dynamodb table for remote state management is the user doesnt already have a remote state bucket they can point at.
-* NEW `open-vpn` module that creates self installing openvpn setup
-* Remote state configuration for all backend.
+* NEW `backend-state` code that setups bucket and dynamodb table for remote state management is the user doesnt already have a remote state bucket they can point at.[@kmalkin](https://github.com/kmalkin)
+* NEW `open-vpn` module that creates self installing openvpn setup[@kmalkin](https://github.com/kmalkin)
+* Remote state configuration for all backend.[@kmalkin](https://github.com/kmalkin)
 
 ### Changed
 
-* Updated README's for all modules
-* Updated .gitignore
-* Pihole ec2 is now a module
-* Pihole ec2 now has 10gb volume instead of 20gb
-* Pihole instance security groups modified to allow cross instance comms from openVpn instance
+* Updated README's for all modules[@kmalkin](https://github.com/kmalkin)
+* Updated .gitignore[@kmalkin](https://github.com/kmalkin)
+* Pihole ec2 is now a module[@kmalkin](https://github.com/kmalkin)
+* Pihole ec2 now has 10gb volume instead of 20gb[@kmalkin](https://github.com/kmalkin)
+* Pihole instance security groups modified to allow cross instance comms from openVpn instance[@kmalkin](https://github.com/kmalkin)
+
+### Fixed
+
+* Sorted out the link between remote state and the locking dynamodb table[@kmalkin](https://github.com/kmalkin)
 
 ### Removed
 
-* Iam role policy / user creation. Anyone should just be able to setup the permissions needed to run this into their aws acccount. If not then its not really the purpose of this code to create that.
+* Iam role policy / user creation. Anyone should just be able to setup the permissions needed to run this into their aws acccount. If not then its not really the purpose of this code to create that.[@kmalkin](https://github.com/kmalkin)
 
 ## [[1.2.0]](https://github.com/kmalkin/tf-aws-pi-hole/releases/tag/1.2.0) - 2020-10-01
 

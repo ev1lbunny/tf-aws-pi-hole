@@ -1,6 +1,7 @@
 terraform {
   backend "s3" {
-    key = "terraform-aws/pihole_openvpn/terraform.tfstate"
+    key            = "terraform-aws/pihole_openvpn/terraform.tfstate"
+    dynamodb_table = "terraform-statelock"
   }
   required_version = ">= 0.13.0"
   required_providers {
