@@ -6,3 +6,4 @@ apt-get upgrade -y
 curl -Ls https://raw.githubusercontent.com/leomoon-studios/openvpn-installer/master/src/openvpn-installer -O ~/openvpn-installer
 chmod +x ~/openvpn-installer
 SILENT=y sudo -E ./openvpn-installer
+MENU=1 CLIENT=default_client PASS=n sudo -E lmovpn
