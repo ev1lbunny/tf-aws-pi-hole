@@ -27,3 +27,8 @@ variable "r53_zone" {
   description = "Route 53 Zone"
   type        = string
 }
+
+variable "additional_tags" {
+  description = "Additional resource tags"
+  type        = map(string)
+}

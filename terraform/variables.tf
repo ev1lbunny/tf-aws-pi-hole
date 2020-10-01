@@ -43,3 +43,9 @@ variable "r53_zone" {
   type        = string
   default     = ""
 }
+
+variable "additional_tags" {
+  default     = {}
+  description = "Additional resource tags"
+  type        = map(string)
+}

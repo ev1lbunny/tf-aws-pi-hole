@@ -7,6 +7,7 @@ module "pi_hole" {
   pi_hole_web_admin_password = var.pi_hole_web_admin_password
   enable_r53_zone_code       = var.enable_r53_zone_code
   r53_zone                   = var.r53_zone
+  additional_tags = var.additional_tags
 }
 
 module "open_vpn" {
@@ -17,4 +18,5 @@ module "open_vpn" {
   open_vpn_key_pair_name    = var.open_vpn_key_pair_name
   enable_r53_zone_code      = var.enable_r53_zone_code
   r53_zone                  = var.r53_zone
+  additional_tags = var.additional_tags
 }
