@@ -4,12 +4,6 @@ variable "aws_region" {
   default     = "eu-west-2"
 }
 
-variable "pi_hole_management_role" {
-  description = "Rolename created from the iam code used for managing the pi-hole instance"
-  type        = string
-  default     = "pi-hole-management-role"
-}
-
 variable "aws_credentials_profile" {
   description = "High level profile name that the terraform uses for aws access to create new role/policy/user for pihole deployment"
   type        = string

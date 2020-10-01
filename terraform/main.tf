@@ -4,7 +4,6 @@ module "pi_hole" {
   aws_region                 = var.aws_region
   ingress_access_ip_address  = var.ingress_access_ip_address
   pi_hole_key_pair_name      = var.pi_hole_key_pair_name
-  pi_hole_management_role    = var.pi_hole_management_role
   pi_hole_web_admin_password = var.pi_hole_web_admin_password
   enable_r53_zone_code       = var.enable_r53_zone_code
   r53_zone                   = var.r53_zone

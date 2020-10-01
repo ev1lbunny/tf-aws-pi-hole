@@ -3,11 +3,6 @@ variable "aws_region" {
   type        = string
 }
 
-variable "pi_hole_management_role" {
-  description = "Rolename created from the iam code used for managing the pi-hole instance"
-  type        = string
-}
-
 variable "aws_credentials_profile" {
   description = "High level profile name that the terraform uses for aws access to create new role/policy/user for pihole deployment"
   type        = string
