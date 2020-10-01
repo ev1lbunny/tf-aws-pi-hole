@@ -86,6 +86,23 @@ resource "aws_security_group" "open_vpn_to_pi_hole_security_group" {
     cidr_blocks = ["${var.open_vpn_source_ip}/32"]
   }
 
+  ingress {
+    description = "OpenVPN WAN HTTP Access"
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["${var.open_vpn_source_ip}/32"]
+  }
+
+  ingress {
+    description = "OpenVPN WAN HTTPS Access"
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
+    cidr_blocks = ["${var.open_vpn_source_ip}/32"]
+  }
+
+
   tags = merge(
     {
       Name = "Open VPN DNS Access to Pi Hole Security Group"
