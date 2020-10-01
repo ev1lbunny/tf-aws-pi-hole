@@ -7,7 +7,7 @@ https://pi-hole.net/
 
 ## Overview
 
-This repo is responsible for managing/creating an ec2 instance inside of aws free tier t2.micro with an elastic ip address and deploying pihole preconfigured into that instance
+This repo is responsible for managing/creating an ec2 instance inside of aws with an elastic ip address and deploying pihole preconfigured into that instance
 
 Also configured if you use version 2.#.# onwards is the ability to have a pre-configured openvpn instance too so not jsut the dns is filtered but all traffic can then go down the vpn too
 
@@ -57,4 +57,4 @@ See change log for specifics.
 
 # !!!! DISCLAIMER !!!!
 
-All code is currently designed to run within aws free tier. However there are still certain costs associated with running infra in aws. All costs are down to the responsibility of the aws account owner. If you dont know/understand what this is deploying. Dont deploy it. There may be running costs involved with elastic ips/storage/keypairs that you as the aws account owner would be responsible for.
+All code is currently designed to run within aws. All costs are down to the responsibility of the aws account owner. If you dont know/understand what this is deploying. Dont deploy it. There may be running costs involved with elastic ips/storage/keypairs that you as the aws account owner would be responsible for.
