@@ -15,12 +15,18 @@ For now the user it creates is a placeholder and had an incomplete policy. So wi
 
 ## Prerequisites
 
-A basic knowledge of terraform , how to apply and run it.
-A basic understanding of how to configure / setup and use aws cli commands. -- You will need to setup appropriate profile
+* A basic knowledge of terraform , how to apply and run it.
+* A basic understanding of how to configure / setup and use aws cli commands. -- You will need to setup appropriate profile
+
+##NB
+* It is recommended that you setup/and use a remote state config by updating the `terraform {}` block in the `versions.tf` to use some form of remote state management etc. However I am not planning on making remote state mandatory. If people want to run and keep state in local systems, thats fine, although not recommended. To that end, there is a `backend-state` module that you can run if you choose too which will create the bucket and dynamo db table needed for backend state. Then you can just update the `terraform {}` definition to use the new backend resources if you choose.
 
 ## Versions
 
-See change log for specifics. Recommended that the latest tag is always used rather than master
+See change log for specifics.
+
+1.#.# >= only the Pi Hole deployment (Now this works we are probably not expecting much more to be added here except standard updates/patches)
+2.#.# >= both the Pi Hole and OpenVPN
 
 ## Usage
 
