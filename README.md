@@ -1,9 +1,9 @@
 # tf-aws-pi-hole
 ## Complete Terraform solution to Pi Hole install
 
-Many thanks to the guys and gals that actually provide this free opensource tool for the benefit of us all.
+* Many thanks to the guys and gals that actually provide this free opensource tool for the benefit of us all.
 https://pi-hole.net/
-
+* Also Many thanks to leomoon-studios for making a silent installed for openvpn:-  https://github.com/leomoon-studios/openvpn-installer-for-linux
 
 ## Overview
 
@@ -29,18 +29,24 @@ See change log for specifics.
 
 ## Usage
 
-Setup which state storage you want to use. By default it will assume backend remote state storage.
-If you do want to use with remote state make sure you run `terraform apply` in the `backend-state` folder to release the needed infra for remote state storage
-If you dont want to use remote state remove the following from the versions.tf file 
+* Setup which state storage you want to use. By default it will assume backend remote state storage.
+* If you do want to use with remote state make sure you run `terraform apply` in the `backend-state` folder to release the infra needed for remote state storage.
+* If you dont want to use remote state remove the following from the versions.tf file.
 ```
   backend "s3" {
     key = "terraform-aws/pihole_openvpn/terraform.tfstate"
   }
 ```
 
-Then simply run `terraform apply` in the parent terraform directory and provide the variables required. It will create the rest.
+* Then simply run `terraform apply` in the parent terraform directory and provide the variables required. It will create the rest.
 
-Or include the variables in a parameter file like `terraform apply -var-file=params/default.tfvars`
+* Or include the variables in a parameter file like `terraform apply -var-file=params/default.tfvars`
+
+* The only step to do is to pull the *.ovpn config for programs like (tunnelblick) from the pre-configured openvpn isntance using SCP.
+* EG. `scp -i "YOUR-CERT.pem" ubuntu@YOUR-EC2-INSTANCE:default_client.ovpn .
+
+* Of course you can login via ssh and create new client setups if you require. OpenVPN is configurable once logged in with `sudo lmovpn`
+
 
 ## Future features
 
