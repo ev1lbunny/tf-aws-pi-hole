@@ -1,6 +1,6 @@
-resource "aws_security_group" "open_vpn_security_group" {
-  name        = "open-vpn-security-group"
-  description = "Configures All rules required for OpenVPN access and management"
+resource "aws_security_group" "security_group" {
+  name        = "${var.prefix_identifier}security-group"
+  description = "Configures All rules required for ${var.prefix_identifier} instance access and management"
 
   ingress {
     description = "Home LAN SSH Access"
@@ -59,7 +59,7 @@ resource "aws_security_group" "open_vpn_security_group" {
 
   tags = merge(
     {
-      Name = "OpenVPN Security Group"
+      Name = "OpenVPN / Pi Hole Security Group"
     },
     var.additional_tags,
   )
