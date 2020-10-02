@@ -9,13 +9,14 @@ variable "aws_credentials_profile" {
 }
 
 variable "ingress_access_ip_address" {
-  description = "Ip address that you will access the openvpn from. All other access will be locked."
+  description = "Ip address that you will access the instance from. All other access will be locked."
   type        = string
 }
 
 variable "pi_hole_web_admin_password" {
   description = "Password For accessing the Pihole gui admin console. Not really needed since security groups stop anyone but a single ip (your ip) from accessing it anyhow"
   type        = string
+  default     = ""
 }
 
 variable "key_pair_name" {
