@@ -7,3 +7,8 @@ output "pihole" {
   description = "DNS Entry"
   value       = join("", aws_route53_record.pihole.*.fqdn)
 }
+
+output "dns" {
+  description = "DNS Entry"
+  value       = join("", aws_route53_record.dns.*.fqdn)
+}
