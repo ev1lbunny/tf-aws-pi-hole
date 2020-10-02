@@ -25,6 +25,16 @@ module "pi_hole_instance" {
   prefix_identifier          = "pi-hole-"
 }
 
+module "additional_pihole_instance_sg_rules" {
+  count      = var.enable_separate_openvpn_instance ? 1 : 0
+  depends_on = [module.pi_hole_instance, module.open_vpn_instance]
+
+  source                     = "./sg_rules"
+  instance_access_ip_address = module.open_vpn_instance.public_ip
+  pi_hole_instance_sg_id     = module.pi_hole_instance.security_group_id
+
+}
+
 module "shared_instance" {
   count = var.split_instances ? 0 : 1
 

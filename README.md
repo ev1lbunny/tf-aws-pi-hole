@@ -28,7 +28,7 @@
  ## Usage
 
  ### Setup
- * Checkout the code. Enter the `backendstate` directory and run `terraform init && terraform apply`. This will create the backend remote state objects. Take note of the bucket name output.
+ * Checkout the code. Enter the `backend-state` directory and run `terraform init && terraform apply`. This will create the backend remote state objects. Take note of the bucket name output.
  * Then simply run `terraform apply` in the parent terraform directory and provide the variables required. It will create the rest.
  * Or include the variables in a parameter file like `terraform apply varfile=params/default.tfvars`
 
@@ -40,7 +40,6 @@
  variable "split_instances"  false
  ```
  * Setting `split_instances` to true, means you then need to choose which separate instances you want. You can have just 1 or both and use them individually or together.
-
 
  ### Post infra deployment
  * The only step to do is to pull the *.ovpn config for programs like (tunnelblick) from the preconfigured openvpn isntance using SCP.

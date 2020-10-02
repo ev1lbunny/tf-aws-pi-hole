@@ -28,3 +28,4 @@ No requirements.
 | Name | Description |
 |------|-------------|
 | public\_ip | Instance Public IP created |
+| security\_group\_id | Secuirty Group Id |
