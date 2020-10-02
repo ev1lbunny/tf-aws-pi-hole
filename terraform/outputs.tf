@@ -1,14 +1,19 @@
-output "public_ip" {
-  description = "Public IP created"
-  value       = aws_eip.pi_hole_elastic_ip.public_ip
+output "open_vpn_public_ip" {
+  description = "OpenVPN Public IP created"
+  value       = module.open_vpn[0].public_ip
 }
 
-output "pihole" {
-  description = "DNS Entry"
-  value       = join("", aws_route53_record.pihole.*.fqdn)
+output "pi_hole_public_ip" {
+  description = "Pi Hole Public IP created"
+  value       = module.pi_hole[0].public_ip
 }
 
-output "dns" {
-  description = "DNS Entry"
-  value       = join("", aws_route53_record.dns.*.fqdn)
+output "open_vpn_r53_entries" {
+  description = "OpenVPN DNS Entries"
+  value       = module.open_vpn[0].r53_entry
+}
+
+output "pi_hole_r53_entries" {
+  description = "Pi Hole DNS Entries"
+  value       = module.open_vpn[0].r53_entry
 }

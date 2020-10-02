@@ -1,8 +1,8 @@
 
 resource "aws_route53_record" "pihole" {
-  count = var.enable_r53_zone_code ? 1 : 0
+  count = length(var.r53_zone_id) > 0 ? 1 : 0
 
-  zone_id = aws_route53_zone.myzone[0].id
+  zone_id = var.r53_zone_id
   name    = "pihole.${var.r53_zone}"
   type    = "A"
   ttl     = "300"
@@ -10,9 +10,9 @@ resource "aws_route53_record" "pihole" {
 }
 
 resource "aws_route53_record" "dns" {
-  count = var.enable_r53_zone_code ? 1 : 0
+  count = length(var.r53_zone_id) > 0 ? 1 : 0
 
-  zone_id = aws_route53_zone.myzone[0].id
+  zone_id = var.r53_zone_id
   name    = "dns.${var.r53_zone}"
   type    = "A"
   ttl     = "300"
