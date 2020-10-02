@@ -1,5 +1,5 @@
 module "open_vpn_instance" {
-  count = var.enable_openvpn_module ? 1 : 0
+  count = var.enable_separate_openvpn_instance ? 1 : 0
 
   source                     = "./instance_deployment"
   aws_credentials_profile    = var.aws_credentials_profile
@@ -13,7 +13,7 @@ module "open_vpn_instance" {
 }
 
 module "pi_hole_instance" {
-  count = var.enable_pihole_module ? 1 : 0
+  count = var.enable_separate_pihole_instance ? 1 : 0
 
   source                     = "./instance_deployment"
   aws_credentials_profile    = var.aws_credentials_profile

@@ -28,12 +28,12 @@ variable "key_pair_name" {
   type        = string
 }
 
-variable "enable_openvpn_module" {
+variable "enable_separate_openvpn_instance" {
   description = "Boolean True/False to control the ec2 installs. Set to false if you dont want to build the openvpn instance."
   type        = bool
 }
 
-variable "enable_pihole_module" {
+variable "enable_separate_pihole_instance" {
   description = "Boolean True/False to control the ec2 installs. Set to false if you dont want to build the pihole instance."
   type        = bool
 }

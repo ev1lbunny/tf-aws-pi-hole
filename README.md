@@ -29,22 +29,24 @@ See change log for specifics.
 
 ## Usage
 
-* Setup which state storage you want to use. By default it will assume backend remote state storage.
-* If you do want to use with remote state make sure you run `terraform apply` in the `backend-state` folder to release the infra needed for remote state storage.
-* If you dont want to use remote state remove the following from the versions.tf file.
-```
-  backend "s3" {
-    key = "terraform-aws/pihole_openvpn/terraform.tfstate"
-  }
-```
-
+### Setup
+* Checkout the code. Enter the `backend-state` directory and run `terraform init && terraform apply`. This will create the backend remote state objects. Take note of the bucket name output.
 * Then simply run `terraform apply` in the parent terraform directory and provide the variables required. It will create the rest.
-
 * Or include the variables in a parameter file like `terraform apply -var-file=params/default.tfvars`
 
+### Different types of infra configurations
+* The 3 variables control what type of infra deployment you want. By default you will get single instance pihole and open vpn deployment inside the single ec2 instance.
+```
+variable "enable_separate_openvpn_instance" - false
+variable "enable_separate_pihole_instance" - false
+variable "split_instances" - false
+```
+* Setting `split_instances` to true, means you then need to choose which separate instances you want. You can have just 1 or both and use them individually or together.
+
+
+### Post infra deployment
 * The only step to do is to pull the *.ovpn config for programs like (tunnelblick) from the pre-configured openvpn isntance using SCP.
 * EG. `scp -i "YOUR-CERT.pem" ubuntu@YOUR-EC2-INSTANCE:/etc/openvpn/client/default_client.ovpn .`
-
 * Of course you can login via ssh and create new client setups if you require. OpenVPN is configurable once logged in with `sudo lmovpn`
 
 
