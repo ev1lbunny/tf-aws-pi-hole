@@ -5,7 +5,7 @@ resource "aws_security_group_rule" "tcp_dns_in" {
   to_port           = 53
   protocol          = "tcp"
   cidr_blocks       = ["${var.instance_access_ip_address}/32"]
-  security_group_id = module.pi_hole_instance.security_group_id
+  security_group_id = var.pi_hole_instance_sg_id
 }
 resource "aws_security_group_rule" "udp_dns_in" {
   description       = "VPN to Pihole DNS UDP Access"
@@ -14,7 +14,7 @@ resource "aws_security_group_rule" "udp_dns_in" {
   to_port           = 53
   protocol          = "udp"
   cidr_blocks       = ["${var.instance_access_ip_address}/32"]
-  security_group_id = module.pi_hole_instance.security_group_id
+  security_group_id = var.pi_hole_instance_sg_id
 }
 resource "aws_security_group_rule" "tcp_http_in" {
   description       = "VPN to Pihole HTTP Access"
@@ -23,7 +23,7 @@ resource "aws_security_group_rule" "tcp_http_in" {
   to_port           = 80
   protocol          = "tcp"
   cidr_blocks       = ["${var.instance_access_ip_address}/32"]
-  security_group_id = module.pi_hole_instance.security_group_id
+  security_group_id = var.pi_hole_instance_sg_id
 }
 resource "aws_security_group_rule" "tcp_https_in" {
   description       = "VPN to Pihole HTTPS Access"
@@ -32,5 +32,5 @@ resource "aws_security_group_rule" "tcp_https_in" {
   to_port           = 443
   protocol          = "tcp"
   cidr_blocks       = ["${var.instance_access_ip_address}/32"]
-  security_group_id = module.pi_hole_instance.security_group_id
+  security_group_id = var.pi_hole_instance_sg_id
 }

@@ -30,8 +30,8 @@ module "additional_pihole_instance_sg_rules" {
   depends_on = [module.pi_hole_instance, module.open_vpn_instance]
 
   source                     = "./sg_rules"
-  instance_access_ip_address = module.open_vpn_instance.public_ip
-  pi_hole_instance_sg_id     = module.pi_hole_instance.security_group_id
+  instance_access_ip_address = module.open_vpn_instance[0].public_ip
+  pi_hole_instance_sg_id     = module.pi_hole_instance[0].security_group_id
 
 }
 
