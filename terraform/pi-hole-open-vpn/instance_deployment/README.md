@@ -28,4 +28,3 @@ No requirements.
 | Name | Description |
 |------|-------------|
 | public\_ip | Instance Public IP created |
-
