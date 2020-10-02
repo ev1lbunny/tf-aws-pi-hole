@@ -66,7 +66,6 @@ resource "aws_security_group" "pi_hole_security_group" {
 }
 
 resource "aws_security_group" "open_vpn_to_pi_hole_security_group" {
-
   name        = "open-vpn-pi-hole-security-group"
   description = "Configures All rules required for open vpn instance to use pihole as dns lookup"
 

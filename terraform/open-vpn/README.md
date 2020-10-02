@@ -29,4 +29,3 @@ No requirements.
 | private\_ip | OpenVPN Private IP created |
 | public\_ip | OpenVPN Public IP created |
 | r53\_entry | DNS Entry |
-

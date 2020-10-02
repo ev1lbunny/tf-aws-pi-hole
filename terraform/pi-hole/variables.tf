@@ -39,6 +39,6 @@ variable "additional_tags" {
 }
 
 variable "open_vpn_source_ip" {
-  description = "OpenVPN instance ip so that it can access pihole as DNS server."
+  description = "OpenVPN instance ip so that it can access pihole as DNS server. Not required if not using openvpn module"
   type        = string
 }

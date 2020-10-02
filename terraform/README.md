@@ -31,4 +31,3 @@ No provider.
 | open\_vpn\_r53\_entries | OpenVPN DNS Entries |
 | pi\_hole\_public\_ip | Pi Hole Public IP created |
 | pi\_hole\_r53\_entries | Pi Hole DNS Entries |
-

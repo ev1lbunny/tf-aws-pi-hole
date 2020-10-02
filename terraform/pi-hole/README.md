@@ -30,4 +30,3 @@ No requirements.
 |------|-------------|
 | public\_ip | Pi Hole Public IP created |
 | r53\_entry | DNS Entry |
-

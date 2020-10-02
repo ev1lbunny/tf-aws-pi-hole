@@ -18,4 +18,4 @@ variable "aws_dynamodb_table_name" {
   description = "Name for the backend state locking table"
   type        = string
   default     = "terraform-statelock"
-} 
+}
