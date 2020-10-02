@@ -4,7 +4,7 @@ resource "tls_private_key" "key_pair_config" {
 }
 
 resource "aws_key_pair" "generated_server_keypair" {
-  key_name   = "${var.prefix_identifier} ${var.key_pair_name}"
+  key_name   = "${var.prefix_identifier}${var.key_pair_name}"
   public_key = tls_private_key.key_pair_config.public_key_openssh
 }
 
@@ -12,7 +12,7 @@ resource "aws_instance" "ec2" {
   ami                    = "ami-05c424d59413a2876"
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.security_group.id]
-  key_name               = "${var.prefix_identifier} ${var.key_pair_name}"
+  key_name               = "${var.prefix_identifier}${var.key_pair_name}"
   root_block_device {
     volume_size = 15
   }
