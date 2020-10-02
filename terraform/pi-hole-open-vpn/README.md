@@ -23,4 +23,3 @@ No provider.
 ## Outputs
 
 No output.
-

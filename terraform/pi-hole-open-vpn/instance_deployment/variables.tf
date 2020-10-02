@@ -34,5 +34,5 @@ variable "user_data_template" {
 
 variable "prefix_identifier" {
   description = "Prefix added to all resources in aws to differentiate between types of infra setup"
-  type = string
+  type        = string
 }
