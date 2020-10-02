@@ -1,4 +1,6 @@
 module "pi_hole" {
+  count = var.enable_pihole_module ? 1 : 0
+
   source                     = "./pi-hole"
   aws_credentials_profile    = var.aws_credentials_profile
   aws_region                 = var.aws_region
@@ -12,6 +14,8 @@ module "pi_hole" {
 }
 
 module "open_vpn" {
+  count = var.enable_openvpn_module ? 1 : 0
+
   source                    = "./open-vpn"
   aws_credentials_profile   = var.aws_credentials_profile
   aws_region                = var.aws_region

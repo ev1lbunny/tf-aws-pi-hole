@@ -37,5 +37,5 @@ resource "aws_eip" "open_vpn_elastic_ip" {
 }
 
 data "template_file" "open_vpn_user_data" {
-  template = "${file("${path.module}/templates/open-vpn-init.tpl")}"
+  template = file("${path.module}/templates/open-vpn-init.tpl")
 }

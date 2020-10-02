@@ -45,7 +45,19 @@ variable "r53_zone" {
 }
 
 variable "additional_tags" {
-  default     = {}
   description = "Additional resource tags"
   type        = map(string)
+  default     = {}
+}
+
+variable "enable_openvpn_module" {
+  description = "Boolean True/False to control the ec2 installs. Set to false if you dont want to build the openvpn instance."
+  type        = bool
+  default     = true
+}
+
+variable "enable_pihole_module" {
+  description = "Boolean True/False to control the ec2 installs. Set to false if you dont want to build the pihole instance."
+  type        = bool
+  default     = true
 }

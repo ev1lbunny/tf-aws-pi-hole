@@ -37,7 +37,7 @@ resource "aws_eip" "pi_hole_elastic_ip" {
 }
 
 data "template_file" "pi_hole_user_data" {
-  template = "${file("${path.module}/templates/pi-hole-init.tpl")}"
+  template = file("${path.module}/templates/pi-hole-init.tpl")
   vars = {
     web_admin_password = var.pi_hole_web_admin_password
   }
