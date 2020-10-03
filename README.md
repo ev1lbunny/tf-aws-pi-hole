@@ -7,13 +7,13 @@
 
  ## Overview
 
- This repo is responsible for managing/creating an ec2 instance inside of aws with an elastic ip address and deploying pihole preconfigured into that instance
-
- Also configured if you use version 2.#.# onwards is the ability to have a preconfigured openvpn instance too so not jsut the dns is filtered but all traffic can then go down the vpn too
+ * This is a completely self configured self deploying Pihole/VPN solution for aws cloud.
+ * It deploys a complete full traffic openvpn tunnel and wires it though pihole as its DNS provider. Creating a completely self contained private network tunnel with dns blocking / filtering solution.
 
  ## Prerequisites
  * A basic knowledge of terraform , how to apply and run it.
  * A basic understanding of how to configure / setup and use aws cli commands.  You will need to setup appropriate profile
+ * Linux experience and AWS account to deploy into.
 
  NB
  * It is recommended that you setup/and use a remote state.
@@ -22,8 +22,8 @@
 
  See change log for specifics.
 
-  1.#.# >= only the Pi Hole deployment (Now this works we are probably not expecting much more to be added here except standard updates/patches)
-  2.#.# >= both the Pi Hole and OpenVPN
+  1.#.# >= obsolete and probably wont be maintained now.
+  2.#.# >= both the Pi Hole and OpenVPN in either single or separate instances
 
  ## Usage
 
@@ -46,7 +46,7 @@
  ### Post infra deployment
  * The only step to do is to pull the *.ovpn config for programs like (tunnelblick) from the preconfigured openvpn isntance using SCP.
  * EG. `scp i "YOURCERT.pem" ubuntu@YOUREC2INSTANCE:/etc/openvpn/client/default_client.ovpn .`
- * Of course you can login via ssh and create new client setups if you require. OpenVPN is configurable once logged in with `sudo lmovpn`
+ * Of course you can login via ssh and create new client setups as many as you require you require. OpenVPN is configurable once logged in with `sudo lmovpn`
 
 
  ## Future features
