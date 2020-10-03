@@ -37,3 +37,24 @@ variable "prefix_identifier" {
   description = "Prefix added to all resources in aws to differentiate between types of infra setup"
   type        = string
 }
+
+variable "instance_type" {
+  description = "Requested Instance Type"
+  type        = string
+}
+
+variable "instance_hostname" {
+  description = "Requested Instance Hostname"
+  type        = string
+}
+
+variable "instance_volume_size" {
+  description = "Requested Instance Volume Size"
+  type        = number
+}
+
+variable "instance_ami_id" {
+  description = "Requested Instance Ami Image Id"
+  type        = string
+  default     = "ami-05c424d59413a2876"
+}

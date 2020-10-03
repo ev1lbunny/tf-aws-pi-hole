@@ -9,6 +9,9 @@ module "open_vpn_instance" {
   additional_tags           = merge({ Name = "Open Vpn Server" }, var.additional_tags)
   user_data_template        = file("${path.module}/templates/open-vpn-init.tpl")
   prefix_identifier         = "open-vpn-"
+  instance_type             = "t3.nano"
+  instance_hostname         = "aws-open-vpn-server"
+  instance_volume_size      = 8
 }
 
 module "pi_hole_instance" {
@@ -23,6 +26,9 @@ module "pi_hole_instance" {
   additional_tags            = merge({ Name = "Pi Hole Server" }, var.additional_tags)
   user_data_template         = file("${path.module}/templates/pi-hole-init.tpl")
   prefix_identifier          = "pi-hole-"
+  instance_type              = "t3.nano"
+  instance_hostname          = "aws-pihole-server"
+  instance_volume_size       = 8
 }
 
 module "additional_pihole_instance_sg_rules" {
@@ -47,4 +53,7 @@ module "shared_instance" {
   additional_tags            = merge({ Name = "Pi Hole / Open Vpn Server" }, var.additional_tags)
   user_data_template         = file("${path.module}/templates/open-vpn-pi-hole-joint-init.tpl")
   prefix_identifier          = "pi-hole-open-vpn-shared-"
+  instance_type              = "t3.nano"
+  instance_hostname          = "aws-pihole-openvpn-server"
+  instance_volume_size       = 10
 }
