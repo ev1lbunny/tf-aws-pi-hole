@@ -22,8 +22,8 @@
 
  See change log for specifics.
 
-  1.#.# >= obsolete and probably wont be maintained now.
-  2.#.# >= both the Pi Hole and OpenVPN in either single or separate instances
+  * 1.#.# >= obsolete and probably wont be maintained now.
+  * 2.#.# >= both the Pi Hole and OpenVPN in either single or separate instances
 
  ## Usage
 
