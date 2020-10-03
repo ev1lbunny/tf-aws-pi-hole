@@ -40,6 +40,8 @@
  variable "split_instances"  false
  ```
  * Setting `split_instances` to true, means you then need to choose which separate instances you want. You can have just 1 or both and use them individually or together.
+ * When/If you do decide to split the instances. The vpn will not be pointing at the pihole by default. You have got to change open vpn config `/etc/openvpn/server/server.conf` to point to your pihole instance.
+ * If you want a vpn solution that is automatically tunneled through the pihole I strongly recommend you go for the single instance default appoach.
 
  ### Post infra deployment
  * The only step to do is to pull the *.ovpn config for programs like (tunnelblick) from the preconfigured openvpn isntance using SCP.
