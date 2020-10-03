@@ -46,7 +46,7 @@
  ### Post infra deployment
  * The only step to do is to pull the *.ovpn config for programs like (tunnelblick) from the preconfigured openvpn isntance using SCP.
  * EG. `scp i "YOURCERT.pem" ubuntu@YOUREC2INSTANCE:/etc/openvpn/client/default_client.ovpn .`
- * Of course you can login via ssh and create new client setups as many as you require you require. OpenVPN is configurable once logged in with `sudo lmovpn`
+ * Of course you can login via ssh and create new client setups, as many as you require. OpenVPN is configurable once logged in with `sudo lmovpn`
 
 
  ## Future features
