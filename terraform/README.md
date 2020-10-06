@@ -23,7 +23,7 @@ No provider.
 | ingress\_access\_ip\_address | Ip address that you will access the pihole from. All other access will be locked. | `string` | n/a | yes |
 | key\_pair\_name | Name to give the generated keypair that will be associated with the pihole ec2 isntance for ssh access | `string` | `"server-keypair"` | no |
 | pi\_hole\_web\_admin\_password | Password For accessing the Pihole gui admin console. Not really needed since security groups stop anyone but a single ip (your ip) from accessing it anyhow | `string` | `""` | no |
-| split\_instances | Boolean True/False to control the ec2 installs. By default you will get 1 separate ec2 instance. Set to true and it will separate both OpenVPN and Pihole instances. Once split is true make sure you choose which intances to enable with the other vars. | `bool` | `false` | no |
+| split\_instances | Boolean True/False to control the ec2 installs. By default you will get 1 ec2 instance. Set to true and it will separate both OpenVPN and Pihole instances. Once split is true make sure you choose which intances to enable with the other vars. | `bool` | `false` | no |
 
 ## Outputs
 

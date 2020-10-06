@@ -45,7 +45,7 @@ variable "enable_separate_pihole_instance" {
 }
 
 variable "split_instances" {
-  description = "Boolean True/False to control the ec2 installs. By default you will get 1 separate ec2 instance. Set to true and it will separate both OpenVPN and Pihole instances. Once split is true make sure you choose which intances to enable with the other vars."
+  description = "Boolean True/False to control the ec2 installs. By default you will get 1 ec2 instance. Set to true and it will separate both OpenVPN and Pihole instances. Once split is true make sure you choose which intances to enable with the other vars."
   type        = bool
   default     = false
 }
