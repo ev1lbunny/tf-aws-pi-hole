@@ -1,3 +1,5 @@
+# Terraform Docs
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
 No requirements.
@@ -21,7 +23,7 @@ No requirements.
 | instance\_ami\_id | Requested Instance Ami Image Id | `string` | `"ami-05c424d59413a2876"` | no |
 | instance\_hostname | Requested Instance Hostname | `string` | n/a | yes |
 | instance\_type | Requested Instance Type | `string` | n/a | yes |
-| instance\_volume\_size | Requested Instance Volume Size | `int` | n/a | yes |
+| instance\_volume\_size | Requested Instance Volume Size | `number` | n/a | yes |
 | key\_pair\_name | Name to give the generated keypair that will be associated with the ec2 isntance for ssh access | `string` | n/a | yes |
 | pi\_hole\_web\_admin\_password | Password For accessing the Pihole gui admin console. Not really needed since security groups stop anyone but a single ip (your ip) from accessing it anyhow | `string` | `""` | no |
 | prefix\_identifier | Prefix added to all resources in aws to differentiate between types of infra setup | `string` | n/a | yes |
@@ -33,3 +35,5 @@ No requirements.
 |------|-------------|
 | public\_ip | Instance Public IP created |
 | security\_group\_id | Secuirty Group Id |
+
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

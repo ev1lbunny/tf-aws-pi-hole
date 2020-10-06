@@ -1,3 +1,5 @@
+# Terraform Docs
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
 No requirements.
@@ -23,3 +25,5 @@ No provider.
 ## Outputs
 
 No output.
+
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
