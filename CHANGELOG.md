@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2).
 
 Dates in this file are in format of YYYY-MM-DD (2019-12-13 means 13th of December 2019).
 
-## [[UNRELEASED]](https://github.com/kmalkin/tf-aws-pi-hole/releases/tag/n.n.n) - nnnn-nn-nn
+## [[2.0.0]](https://github.com/kmalkin/tf-aws-pi-hole/releases/tag/2.0.0) - 2020-10-09
 
 ### Added
 
