@@ -14,6 +14,7 @@ Dates in this file are in format of YYYY-MM-DD (2019-12-13 means 13th of Decembe
 * NEW `backend-state` code that setups bucket and dynamodb table for remote state management is the user doesnt already have a remote state bucket they can point at.[@kmalkin](https://github.com/kmalkin)
 * NEW `open-vpn` module that creates self installing openvpn setup[@kmalkin](https://github.com/kmalkin)
 * Remote state configuration for all backend.[@kmalkin](https://github.com/kmalkin)
+* Variables added and mapped for hostname, instance type and volume size.[@kmalkin](https://github.com/kmalkin)
 
 ### Changed
 

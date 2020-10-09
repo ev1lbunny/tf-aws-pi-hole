@@ -52,9 +52,6 @@
  ## Future features
 
  * ASG to ensure there is always a running instance
- * Variablised instance type so that it can be run on other instance types instead of just t2.mico (free tier)
- * Variablised hostname to pass into the pihole ec2 setup
- * Completed permissions map for the bespoke created IAM user/role/policy
 
  # !!!! DISCLAIMER !!!!
 
