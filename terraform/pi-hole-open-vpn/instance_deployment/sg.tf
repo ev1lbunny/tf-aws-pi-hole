@@ -1,6 +1,6 @@
-resource "aws_security_group" "pi_hole_security_group" {
-  name        = "pi-hole-security-group"
-  description = "Configures All rules required for Pihole access and management"
+resource "aws_security_group" "security_group" {
+  name        = "${var.prefix_identifier}security-group"
+  description = "Configures All rules required for ${var.prefix_identifier} instance access and management"
 
   ingress {
     description = "Home LAN SSH Access"
@@ -50,14 +50,6 @@ resource "aws_security_group" "pi_hole_security_group" {
     cidr_blocks = ["${var.ingress_access_ip_address}/32"]
   }
 
-  ingress {
-    description = "Lets Encrypts HTTP Access"
-    from_port   = 80
-    to_port     = 80
-    protocol    = "tcp"
-    cidr_blocks = ["172.65.32.248/32"]
-  }
-
   egress {
     from_port   = 0
     to_port     = 0
@@ -65,7 +57,10 @@ resource "aws_security_group" "pi_hole_security_group" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags = {
-    Name = "Pi hole Security Group"
-  }
+  tags = merge(
+    {
+      Name = "OpenVPN / Pi Hole Security Group"
+    },
+    var.additional_tags,
+  )
 }

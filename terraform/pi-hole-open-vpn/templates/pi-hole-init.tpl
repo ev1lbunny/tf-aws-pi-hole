@@ -2,6 +2,9 @@
 
 apt-get update -y
 apt-get upgrade -y
+
+sudo hostnamectl set-hostname ${instance_hostname}
+
 mkdir /etc/pihole
 touch /etc/pihole/setupVars.conf
 
