@@ -3,5 +3,7 @@
 *.tfstate.backup
 .DS_Store
 .pem
-aws-pi-hole-server.pem
 ahm.tfvars
+kmalkin.tfvars
+*pem
+*.ovpn
