@@ -3,7 +3,7 @@
 
  * Many thanks to the guys and gals that actually provide this free opensource tool for the benefit of us all.
  https://pihole.net/
- * Also Many thanks to leomoonstudios for making a silent installed for openvpn:  https://github.com/leomoonstudios/openvpninstallerforlinux
+ * Also Many thanks to leomoonstudios for making a silent installed for openvpn:  https://github.com/leomoon-studios/openvpn-installer-for-linux
 
  ## Overview
 

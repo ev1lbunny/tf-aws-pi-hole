@@ -6,7 +6,7 @@ sudo hostnamectl set-hostname ${instance_hostname}
 mkdir /etc/pihole
 touch /etc/pihole/setupVars.conf
 
-wget https://raw.githubusercontent.com/leomoon-studios/openvpn-installer/master/src/openvpn-installer -O ~/openvpn-installer
+wget https://raw.githubusercontent.com/kmalkin/openvpn-installer-for-linux/master/src/openvpn-installer -O ~/openvpn-installer
 chmod +x ~/openvpn-installer
 cd ~/ && SILENT=y DNS_TYPE=11 sudo -E ~/openvpn-installer
 
