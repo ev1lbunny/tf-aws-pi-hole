@@ -48,6 +48,9 @@
  * EG. `scp i "YOURCERT.pem" ubuntu@YOUREC2INSTANCE:/etc/openvpn/client/default_client.ovpn .`
  * Of course you can login via ssh and create new client setups, as many as you require. OpenVPN is configurable once logged in with `sudo lmovpn`
 
+### Additional Information / Steps you can do
+* Extra lists and domain block files can be obtained from --- [@Firebog Block Lists](https://v.firebog.net/hosts/lists.php)
+* Lists not owned or maintained by myself.
 
  ## Future features
 
