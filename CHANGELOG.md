@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2).
 
 Dates in this file are in format of YYYY-MM-DD (2019-12-13 means 13th of December 2019).
 
+## [[UNRELEASED]](https://github.com/kmalkin/tf-aws-pi-hole/releases/tag/0.0.0) - 1970-01-01
+
+### Added
+* Added the firebog lists to the README so that people can add to their lists of blocked domains.[@kmalkin](https://github.com/kmalkin)
+
+### Changed
+* Updated the precommit hooks. [@kmalkin](https://github.com/kmalkin)
+* S3 State backend bucket serverside encyption setup[@kmalkin](https://github.com/kmalkin)
+* S3 State backend bucket loggined setup[@kmalkin](https://github.com/kmalkin)
+* tf sec to the precommit hooks/tools. [@kmalkin](https://github.com/kmalkin)
+
 ## [[2.0.0]](https://github.com/kmalkin/tf-aws-pi-hole/releases/tag/2.0.0) - 2020-10-09
 
 ### Added
