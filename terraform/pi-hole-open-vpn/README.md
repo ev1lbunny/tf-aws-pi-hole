@@ -8,6 +8,19 @@ No requirements.
 
 No provider.
 
+## Modules
+
+| Name | Source | Version |
+|------|--------|---------|
+| additional_pihole_instance_sg_rules | ./sg_rules |  |
+| open_vpn_instance | ./instance_deployment |  |
+| pi_hole_instance | ./instance_deployment |  |
+| shared_instance | ./instance_deployment |  |
+
+## Resources
+
+No resources.
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -24,6 +37,9 @@ No provider.
 
 ## Outputs
 
-No output.
-
+| Name | Description |
+|------|-------------|
+| private\_generated\_key | The generated private key used to access the joint ec2 instances via ssh |
+| public\_ip | Instance Public IP created |
+| security\_group\_id | Secuirty Group Id |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

@@ -5,5 +5,7 @@
 .pem
 ahm.tfvars
 kmalkin.tfvars
+eb.tfvars
 *pem
 *.ovpn
+.terraform.lock.hcl
