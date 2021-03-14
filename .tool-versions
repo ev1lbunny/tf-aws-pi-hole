@@ -1,4 +1,4 @@
-terraform 0.13.4
-terraform-docs v0.10.1
-tfsec 0.36.4
-tflint 0.20.3
+terraform 0.14.8
+terraform-docs 0.11.2
+tfsec 0.39.6
+tflint 0.25.0

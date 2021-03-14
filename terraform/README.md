@@ -11,6 +11,16 @@
 
 No provider.
 
+## Modules
+
+| Name | Source | Version |
+|------|--------|---------|
+| pi_hole_open_vpn | ./pi-hole-open-vpn |  |
+
+## Resources
+
+No resources.
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -28,5 +38,4 @@ No provider.
 ## Outputs
 
 No output.
-
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

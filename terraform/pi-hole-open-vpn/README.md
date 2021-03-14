@@ -8,6 +8,19 @@ No requirements.
 
 No provider.
 
+## Modules
+
+| Name | Source | Version |
+|------|--------|---------|
+| additional_pihole_instance_sg_rules | ./sg_rules |  |
+| open_vpn_instance | ./instance_deployment |  |
+| pi_hole_instance | ./instance_deployment |  |
+| shared_instance | ./instance_deployment |  |
+
+## Resources
+
+No resources.
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -25,5 +38,4 @@ No provider.
 ## Outputs
 
 No output.
-
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
