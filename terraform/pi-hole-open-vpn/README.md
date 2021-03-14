@@ -37,5 +37,9 @@ No resources.
 
 ## Outputs
 
-No output.
+| Name | Description |
+|------|-------------|
+| private\_generated\_key | The generated private key used to access the joint ec2 instances via ssh |
+| public\_ip | Instance Public IP created |
+| security\_group\_id | Secuirty Group Id |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
