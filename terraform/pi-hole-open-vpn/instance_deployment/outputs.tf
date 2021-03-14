@@ -7,3 +7,8 @@ output "security_group_id" {
   description = "Secuirty Group Id"
   value       = aws_security_group.security_group.id
 }
+
+output "private_generated_key" {
+  description = "The generated private key used to access the ec2 instances via ssh"
+  value       = tls_private_key.key_pair_config
+}
