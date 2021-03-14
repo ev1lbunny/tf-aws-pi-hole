@@ -30,7 +30,7 @@
  ### Setup
  * Checkout the code. Enter the `backend-state` directory and run `terraform init && terraform apply`. This will create the backend remote state objects. Take note of the bucket name output.
  * Then simply run `terraform apply` in the parent terraform directory and provide the variables required. It will create the rest.
- * Or include the variables in a parameter file like `terraform apply varfile=params/default.tfvars`
+ * Or include the variables in a parameter file like `terraform apply --var-file=params/default.tfvars`
 
  ### Different types of infra configurations
  * The 3 variables control what type of infra deployment you want. By default you will get single instance pihole and open vpn deployment inside the single ec2 instance.
@@ -42,6 +42,7 @@
  * Setting `split_instances` to true, means you then need to choose which separate instances you want. You can have just 1 or both and use them individually or together.
  * When/If you do decide to split the instances. The vpn will not be pointing at the pihole by default. You have got to change open vpn config `/etc/openvpn/server/server.conf` to point to your pihole instance.
  * If you want a vpn solution that is automatically tunneled through the pihole I strongly recommend you go for the single instance default appoach.
+ * For access to the ssh key / cert that is created you can set the output `sensitive=true` to `sensitive=false`. I would highly recommend that the ssh access to the ec2 instance is deleted once used for additional vpn client setup etc. I would also recommend tainting the resource out of the state file in the state bucket as they are stored in plain text.
 
  ### Post infra deployment
  * The only step to do is to pull the *.ovpn config for programs like (tunnelblick) from the preconfigured openvpn isntance using SCP.
