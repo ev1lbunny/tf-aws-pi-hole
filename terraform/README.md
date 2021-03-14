@@ -11,6 +11,16 @@
 
 No provider.
 
+## Modules
+
+| Name | Source | Version |
+|------|--------|---------|
+| pi_hole_open_vpn | ./pi-hole-open-vpn |  |
+
+## Resources
+
+No resources.
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -27,6 +37,9 @@ No provider.
 
 ## Outputs
 
-No output.
-
+| Name | Description |
+|------|-------------|
+| private\_generated\_key | The generated private key used to access the joint ec2 instances via ssh |
+| public\_ip | Instance Public IP created |
+| security\_group\_id | Secuirty Group Id |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

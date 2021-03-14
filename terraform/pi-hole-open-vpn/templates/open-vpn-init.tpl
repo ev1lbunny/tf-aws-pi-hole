@@ -4,7 +4,7 @@ apt-get update -y
 apt-get upgrade -y
 sudo hostnamectl set-hostname ${instance_hostname}
 
-wget https://raw.githubusercontent.com/leomoon-studios/openvpn-installer/master/src/openvpn-installer -O ~/openvpn-installer
+wget https://raw.githubusercontent.com/kmalkin/openvpn-installer-for-linux/master/src/openvpn-installer -O ~/openvpn-installer
 chmod +x ~/openvpn-installer
 cd ~/ && SILENT=y sudo -E ~/openvpn-installer
 MENU=1 CLIENT=default_client PASS=n sudo -E lmovpn
